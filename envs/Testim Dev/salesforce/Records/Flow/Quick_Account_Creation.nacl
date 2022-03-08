@@ -35,7 +35,7 @@ salesforce.Flow Quick_Account_Creation {
     fields = {
       name = "Is_GDPR_Safe"
       dataType = "String"
-      fieldText = "Is GDPR Safe"
+      fieldText = "Is Audit Ready"
       fieldType = "InputField"
       isRequired = false
     }
