@@ -49,8 +49,27 @@ salesforce.Flow Compliance_Flow {
       name = "Create_account"
       label = "Create account"
       locationX = 176
-      locationY = 398
+      locationY = 518
       inputReference = "account"
+    },
+    {
+      name = "Create_Another_Account"
+      label = "Create Another Account"
+      locationX = 176
+      locationY = 398
+      connector = {
+        targetReference = "Create_account"
+      }
+      inputAssignments = [
+        {
+          field = salesforce.Account.field.Is_GDPR_Safe__c
+          value = {
+            booleanValue = true
+          }
+        },
+      ]
+      object = salesforce.Account
+      storeOutputAutomatically = true
     },
   ]
   screens = {
@@ -62,7 +81,7 @@ salesforce.Flow Compliance_Flow {
     allowFinish = true
     allowPause = true
     connector = {
-      targetReference = "Create_account"
+      targetReference = "Create_Another_Account"
     }
     showFooter = true
     showHeader = true
@@ -74,7 +93,7 @@ salesforce.Flow Compliance_Flow {
       targetReference = "add_fields"
     }
   }
-  status = "Draft"
+  status = "Active"
   variables = [
     {
       name = "account"
@@ -85,9 +104,5 @@ salesforce.Flow Compliance_Flow {
       objectType = salesforce.Account
     },
   ]
-  _generated_dependencies = [
-    {
-      reference = salesforce.Account.field.Is_GDPR_Safe__c
-    },
-  ]
+  
 }
