@@ -143,9 +143,9 @@ type salesforce.Case {
         label = "Is USA California Law Safe"
       },
       {
-        fullName = "Is GDPR Safe"
+        fullName = "Is Audit Ready"
         default = false
-        label = "Is GDPR Safe"
+        label = "Is Audit Ready"
         isActive = false
       },
     ]
