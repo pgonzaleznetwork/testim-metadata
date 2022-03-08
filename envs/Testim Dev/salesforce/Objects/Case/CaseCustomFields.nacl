@@ -128,11 +128,6 @@ type salesforce.Case {
     label = "Compliance"
     valueSet = [
       {
-        fullName = "Is GDPR Safe"
-        default = false
-        label = "Is GDPR Safe"
-      },
-      {
         fullName = "Is SOX Safe"
         default = false
         label = "Is SOX Safe"
@@ -146,10 +141,9 @@ type salesforce.Case {
         fullName = "Is GDPR Safe"
         default = false
         label = "Is GDPR Safe"
-        isActive = false
-      },
+      }
     ]
-    restricted = true
+    restricted = false
     createable = true
     updateable = true
     queryable = true
