@@ -1,0 +1,12 @@
+salesforce.CustomLabels CustomLabels {
+  fullName = "CustomLabels"
+  labels = [
+    {
+      fullName = "Compliance_field_label"
+      language = "en_US"
+      protected = true
+      shortDescription = "Compliance field label"
+      value = "Is GDPR Safe"
+    },
+  ]
+}

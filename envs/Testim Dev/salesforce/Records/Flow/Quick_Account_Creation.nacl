@@ -1,0 +1,53 @@
+salesforce.Flow Quick_Account_Creation {
+  fullName = "Quick_Account_Creation"
+  apiVersion = 54
+  interviewLabel = "Quick Account Creation {!$Flow.CurrentDateTime}"
+  label = "Quick Account Creation"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = {
+    name = "Create_Account"
+    label = "Create Account"
+    locationX = 176
+    locationY = 158
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    fields = {
+      name = "Is_GDPR_Safe"
+      dataType = "String"
+      fieldText = "Is GDPR Safe"
+      fieldType = "InputField"
+      isRequired = false
+    }
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "Create_Account"
+    }
+  }
+  status = "Draft"
+}

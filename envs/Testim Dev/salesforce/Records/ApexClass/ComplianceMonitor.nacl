@@ -1,0 +1,14 @@
+salesforce.ApexClass ComplianceMonitor {
+  apiVersion = 54
+  status = "Active"
+  fullName = "ComplianceMonitor"
+  content = file("salesforce/Records/ApexClass/ComplianceMonitor.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account
+    },
+    {
+      reference = salesforce.Account.field.Is_GDPR_Safe__c
+    },
+  ]
+}

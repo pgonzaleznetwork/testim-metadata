@@ -1,0 +1,8 @@
+salesforce.Case Case_Id_1@s {
+  Status = "New"
+  Origin = "Phone"
+  Subject = "Case Id 1"
+  Priority = "Medium"
+  IsEscalated = false
+  Compliance__c = "Is GDPR Safe"
+}

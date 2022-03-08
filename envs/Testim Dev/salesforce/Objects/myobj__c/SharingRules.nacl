@@ -1,0 +1,6 @@
+salesforce.SharingRules myobj__c {
+  fullName = "myobj__c"
+  _parent = [
+    salesforce.myobj__c,
+  ]
+}

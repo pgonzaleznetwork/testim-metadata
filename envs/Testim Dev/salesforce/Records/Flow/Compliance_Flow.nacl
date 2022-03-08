@@ -1,0 +1,93 @@
+salesforce.Flow Compliance_Flow {
+  fullName = "Compliance_Flow"
+  apiVersion = 54
+  assignments = [
+    {
+      name = "add_fields"
+      label = "add fields"
+      locationX = 176
+      locationY = 158
+      assignmentItems = [
+        {
+          assignToReference = "account.Is_GDPR_Safe__c"
+          operator = "Assign"
+          value = {
+            booleanValue = false
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Screen_element"
+      }
+    },
+  ]
+  interviewLabel = "Compliance Flow {!$Flow.CurrentDateTime}"
+  label = "Compliance Flow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  recordCreates = [
+    {
+      name = "Create_account"
+      label = "Create account"
+      locationX = 176
+      locationY = 398
+      inputReference = "account"
+    },
+  ]
+  screens = {
+    name = "Screen_element"
+    label = "Screen element"
+    locationX = 176
+    locationY = 278
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    connector = {
+      targetReference = "Create_account"
+    }
+    showFooter = true
+    showHeader = true
+  }
+  start = {
+    locationX = 50
+    locationY = 0
+    connector = {
+      targetReference = "add_fields"
+    }
+  }
+  status = "Draft"
+  variables = [
+    {
+      name = "account"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = salesforce.Account
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Is_GDPR_Safe__c
+    },
+  ]
+}
