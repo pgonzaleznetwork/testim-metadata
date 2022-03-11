@@ -2,7 +2,7 @@ salesforce.ValidationRule Account_GDPR {
   fullName = "Account.GDPR"
   active = true
   errorConditionFormula = "Is_GDPR_Safe__c = FALSE &&  Name = \"Salto&Testim\""
-  errorMessage = "Please untick the \"Is Audit Ready\" checkbox"
+  errorMessage = "Please untick the \"Is GDPR Safe\" checkbox"
   _parent = [
     salesforce.Account,
   ]
