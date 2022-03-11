@@ -146,7 +146,7 @@ type salesforce.Account {
   }
   salesforce.Checkbox Is_GDPR_Safe__c {
     apiName = "Account.Is_GDPR_Safe__c"
-    label = "Is GDPR Safe"
+    label = "Is Audit Ready"
     defaultValue = false
     createable = true
     updateable = true
