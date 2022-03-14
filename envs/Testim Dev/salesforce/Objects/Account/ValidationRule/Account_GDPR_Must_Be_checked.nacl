@@ -1,14 +1,11 @@
 salesforce.ValidationRule Account_GDPR_Must_Be_checked {
   fullName = "Account.GDPR_Must_Be_checked"
-  active = true
-  errorConditionFormula = "Is_GDPR_Safe__c  = false &&  isBlank(AccountNumber)"
-  errorMessage = "This field must be checked"
+  active = false
+  errorConditionFormula = "Is_GDPR_Safe__c  = true &&  isBlank( Description )"
+  errorMessage = "The Account Description must be  filled in if GDPR audit ready !"
   _parent = [
     salesforce.Account,
   ]
-  _generated_dependencies = [
-    {
-      reference = salesforce.Account.field.Is_GDPR_Safe__c
-    },
-  ]
+  
+  errorDisplayField = salesforce.Account.field.Is_GDPR_Safe__c
 }
