@@ -6,7 +6,7 @@ salesforce.CustomLabels CustomLabels {
       language = "en_US"
       protected = true
       shortDescription = "Compliance field label"
-      value = "Is GDPR Safe"
+      value = "Is Audit Ready"
     },
   ]
 }
